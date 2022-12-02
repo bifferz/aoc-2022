@@ -2,26 +2,12 @@
 
 input = open("day2a.input.txt", "r")
 
-# A = X = 1 = Rock
-# B = Y = 2 = Paper
-# C = Z = 3 = Scissors
-
-# 0 = Lose
-# 3 = Draw
-# 6 = Win
-
-# Rock > Scissors
-# Scissors > Paper
-# Paper > Rock
-
-score = 0
-
 def clean_num(num):
     try:
         return int(num)
     except ValueError:
         return None
-
+score = 0
 for line in input:
     clean_line = []
     if line[0] == "A":
@@ -65,12 +51,8 @@ for line in input:
     score += int(sum)
 print("Score from question1: ",score)
 
-# x == LOSS
-# Y == DRAW
-# Z == WIN
 score2 = 0
 sum2 = 0
-
 input2 = open("day2a.input.txt", "r")
 for line in input2:
     clean_line = []
